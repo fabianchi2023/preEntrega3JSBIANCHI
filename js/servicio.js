@@ -6,6 +6,7 @@ function mostrarServicio() {
   <img src="${servicio.imagen}" alt="${servicio.nombre}" class="img-fluid" />
   <p>${servicio.nombre}</p>
   <p>${servicio.tipo}</p>
+  <p>${servicio.descripcion}</p>
   </div>`
 
 
