@@ -1,36 +1,3 @@
-
-class Reserva {
-    constructor(){
-      
-      this.item = []
-    
-    }
-  
-    agregarServicio (id){
-      let servicio = servicios.find((serv)=> serv.id === id)
-      if (servicio){
-        this.item.push(servicio)
-        console.log("Servicio " + id + " agregado");
-      }
-    }
-  
-    mostrarReserva(){
-      let listado = ""
-      this.item.forEach(servicio => {
-        listado += servicio.nombre + " " + servicio.tipo + "\n"
-      });
-      return listado
-    }
-  
-    calcularCostoReservaTotal(){
-      let costo = 0
-      this.item.forEach(item => {
-        costo += item.precio
-      })
-      return costo
-    }
-  }
-  
   const servicios = [
     {id:1, nombre:"Fútbol 5", tipo:"Sintético", precio: 15000, imagen:"https://muchosnegociosrentables.com/wp-content/uploads/2015/08/campo-de-f%C3%BAtbol-5-o-7.jpg"},
     {id:2, nombre:"Fútbol 5", tipo:"Cemento", precio: 10000, imagen:"https://pbs.twimg.com/media/EXdUYBHXgAIKsfu.png"},
@@ -45,25 +12,25 @@ class Reserva {
   
 const setServiciosLS = (servicios) => {
     localStorage.setItem("servicios", JSON.stringify(servicios));
-  }
+}
   
-  const getServiciosLS = () => {
+const getServiciosLS = () => {
     return JSON.parse(localStorage.getItem("servicios"));
-  }
+}
   
-  const setIdServicio = (id) => {
+const setIdServicio = (id) => {
     localStorage.setItem("servicio", JSON.stringify(id))
-  }
+}
   
-  const getIdServicioLS = () => {
+const getIdServicioLS = () => {
     return JSON.parse(localStorage.getItem("servicio"));
-  }
+}
  
-  const getServicioLS = () => {
+const getServicioLS = () => {
     const servicios = getServiciosLS()
     const id = getIdServicioLS()
     const servicio = servicios.find(item => item.id === id)
   
     return servicio
-  }
+}
   
