@@ -3,7 +3,7 @@ function mostrarServicios() {
   const servicios = getServiciosLS()
   let listado = "";
 
-    servicios.forEach(servicio => {
+  servicios.forEach(servicio => {
       listado += `<div class="col-md-4 text-center my-3">
       <img src="${servicio.imagen}" alt="${servicio.nombre}" height="64"/>
       <a href="servicio.html" onclick="setIdServicio(${servicio.id})" class="text-decoration-none">
@@ -11,7 +11,7 @@ function mostrarServicios() {
       <p>${servicio.tipo}</p>
       </a>
       </div>`;
-    })
+  })
 
 document.getElementById("servicios").innerHTML = listado;
 }
