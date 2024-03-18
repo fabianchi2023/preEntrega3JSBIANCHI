@@ -51,8 +51,6 @@ const setServiciosLS = (servicios) => {
     return JSON.parse(localStorage.getItem("servicios"));
   }
   
-  setServiciosLS(servicios)
-
   const setIdServicio = (id) => {
     localStorage.setItem("servicio", JSON.stringify(id))
   }
