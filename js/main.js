@@ -1,6 +1,7 @@
 ////////////////////////////////////// 3ra Pre Entrega////////////////////////////////////
 function mostrarServicios() {
   const servicios = getServiciosLS()
+  console.log(servicios);
   let listado = "";
 
   servicios.forEach(servicio => {
